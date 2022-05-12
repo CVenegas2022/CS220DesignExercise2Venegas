@@ -1,0 +1,26 @@
+Author Carlos Venegas
+
+This is a program designed to solve the Starbucks Members problem in Design Problems 2 assignment in
+CS220.  The code is comprised of 3 types of components.
+
+Customer:
+This file contains the customer's first and last name, the number of coupons they have, the number of coffees
+towards the next free coffee coupon, their preferred coffee (stored as a String.  More interesting programs
+can be written if Coffee was an object, but this would require more time and info), and a map that helps map
+coupon names to the proper coupon.  This handles the adding and removing from a Customer's coupons, incrementing the amount of coffees they have for the next
+coupon, and giving the customer a free coffee coupon when they reach 3 coffees, as well as setting a customer's
+preferred coffee.
+
+Coupon:
+Coupons should be added as child classes extending Coupon.  Coupon is the parent class containing the title and
+description, as well as parent methods to get the title and descriptions and alter a price to apply the
+discount.  Children classes should override the applyCoupon method to properly apply their discount.  So far,
+the only created Coupon is GetOneFree, which is the free coffee coupon required for other segments.
+
+MembersList:
+This is essentially a map of IDs (stored as Strings) to Customer objects.  It can retrieve customers from the
+map, add customers, and remove customers.  IDs are assigned through a passed in variable in the addCustomer
+method for convenience sake, however, the code could potentially be more useful if an ID generator was added
+(similar to tinyURL).
+
+The program you can use to test the code is TestDriverMain, which tests multiple features of the code.
